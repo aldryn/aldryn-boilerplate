@@ -41,9 +41,9 @@ p.noscript a, p.chromeframe a { color:white; font-weight:bold; }
 .uppercase { text-transform:uppercase; }
 .lowercase { text-transform:lowercase; }
 
-.float-left { float:left; }
-.float-right { float:right; }
-.float-none { float:none; }
+.float-left { float:left !important; }
+.float-right { float:right !important; }
+.float-none { float:none !important; }
 
 // #BASE/helpers/fonts#
 @each $item in 16,18,20,24,28,32 {
@@ -62,9 +62,9 @@ p.noscript a, p.chromeframe a { color:white; font-weight:bold; }
 .legal { font-size:80%; line-height:120%; }
 .highlight { color:$color-primary; }
 
-.text-left { text-align:left; }
-.text-center { text-align:center; }
-.text-right { text-align:right; }
+.text-left { text-align:left !important; }
+.text-center { text-align:center !important; }
+.text-right { text-align:right !important; }
 
 .text-muted { color:$color-muted; }
 .text-info { color:$color-info; }
