@@ -127,8 +127,7 @@ form {
 	// horizontal floated style
 	.form-horizontal {
 		ol > li { @extend .clearfix; }
-		ol > li > label { float:left; width:$form-ratio-left; padding-right:$form-ratio-space;
-			text-align:right; padding-top:round($font-size / 4); }
+		ol > li > label { display: block; padding-top:round($font-size / 4); }
 		ol > li > .field { float:left; width:$form-ratio-right; }
 		ol > li > .field img { vertical-align:top; }
 	}
@@ -149,6 +148,12 @@ form {
 	// errors
 	.text-error {
 		input, textarea, select { border:1px solid $color-error; background-color:tint($color-error, 98%); }
+	}
+}
+@media (min-width: $responsive-tablet) {
+	.form .form-horizontal {
+		ol > li > label { float:left; width:$form-ratio-left; padding-right:$form-ratio-space;
+			text-align:right; }
 	}
 }
 
