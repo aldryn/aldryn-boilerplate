@@ -6,48 +6,46 @@ Markup
 
 .. code-block:: html
 
-    <form action="." method="post" class="form form-example" role="form">
+    <form action="." method="post" class="form" role="form">
         <fieldset>
             <ol>
                 <!-- block example -->
-                <li class="item">
+                <div class="form-group">
                     <label class="label" for="field-name">Name</label>
                     <div class="field">
                         <input type="text" id="field-name" class="input-text" />
                     </div>
-                </li>
+                </div>
                 <!-- inline example -->
-                <li class="item">
+                <div class="form-group">
                     <div class="label"><span class="visuallyhidden">Name</span></div>
                     <div class="field">
                         <label><input type="text" class="input-text" /></label>
                     </div>
-                </li>
+                </div>
+        </fieldset>
+        <fieldset>
                 <!-- multiple elements example -->
-                <li class="item">
-                    <div class="label">Name</div>
-                    <div class="field">
-                        <ol>
-                            <li><label><input type="checkbox" class="input-radiocheck" /> Apple</label></li>
-                            <li><label><input type="checkbox" class="input-radiocheck" /> Orange</label></li>
-                            <li><label><input type="checkbox" class="input-radiocheck" /> Banana</label></li>
-                            <li><label><input type="checkbox" class="input-radiocheck" /> Peach</label></li>
-                        </ol>
-                    </div>
-                </li>
-            </ol>
+                <div class="checkbox">
+                    <label><input type="checkbox" /> Apple</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" /> Orange</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" /> Banana</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" /> Peach</label>
+                </div>
         </fieldset>
 
         <!-- button example -->
         <fieldset>
-            <ol>
-                <li>
                     <div class="label"><!-- no text required --></div>
                     <div class="field">
                         <label><input type="submit" class="btn" value="Submit" /></label>
                     </div>
-                </li>
-            </ol>
         </fieldset>
     </form>
 
@@ -55,7 +53,9 @@ We need to ensure that a label is always associated with an input element. Whene
 use a div with the class ``.label`` to style it as label.
 
 Use the ``fieldset`` element to create a grid and separate blocks where required. For example
-``<fieldset class="large-12 column"> ... </fieldset>``.
+``<fieldset class="col-md-12"> ... </fieldset>``.
+
+Grid Classes as per http://getbootstrap.com/css/#grid
 
 Detailed information about the inner form elements can be found on the styleguide:
 http://standardsite-dev.divio.ch/en/styleguide/#page-forms
