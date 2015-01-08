@@ -2,6 +2,10 @@
 Aldryn Boilerplate Standard
 ===========================
 
+3.0.7
+-----
+- update to css guidelines on use of universal selectors
+
 3.0.6
 -----
 - update to css rule order guidelines
