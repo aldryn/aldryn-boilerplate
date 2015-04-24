@@ -1,5 +1,5 @@
 #############################
-Aldryn Boilerplate Bootstrap3
+Aldryn Boilerplate Bootstrap 3
 #############################
 
 
