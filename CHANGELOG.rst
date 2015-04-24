@@ -1,6 +1,12 @@
 #############################
-Aldryn Boilerplate Bootstrap3
+Aldryn Boilerplate Bootstrap 3
 #############################
+
+
+3.3.1
+=====
+- work on documentation
+- improve local testing
 
 
 3.3.0

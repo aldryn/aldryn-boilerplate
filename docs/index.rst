@@ -26,9 +26,9 @@ Documentation
     :maxdepth: 2
 
     general/index
+    usage/index
     guidelines/index
     structure/index
     testing/index
     codestyle/index
-    tips/index
     contribution/index
