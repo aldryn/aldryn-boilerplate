@@ -2,6 +2,9 @@
 Aldryn Boilerplate Bootstrap 3
 ##############################
 
+3.3.3
+=====
+- additional codestyle entries
 
 3.3.2
 =====
