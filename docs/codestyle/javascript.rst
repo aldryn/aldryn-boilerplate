@@ -831,6 +831,74 @@ Comparison operators are evaluated using coercion with the ToBoolean method and 
     );
     anotherStatement;
 
+jQuery
+======
+
+
+Variables
+---------
+
+Do not prefix jQuery variables with ``$``.
+Always cache jQuery lookups.
+
+.. code-block:: javascript
+
+    // bad
+    function setSidebar() {
+        $('.sidebar').hide();
+        $('.sidebar').css({
+            'background-color': 'pink'
+        });
+    }
+
+    // bad
+    function setSidebar() {
+        var $sidebar = $('.sidebar');
+        $sidebar.hide();
+        $sidebar.css({
+            'background-color': 'pink'
+        });
+    }
+
+    // good
+    function setSidebar() {
+        var sidebar = $('.sidebar');
+        sidebar.hide();
+        sidebar.css({
+            'background-color': 'pink'
+        });
+    }
+
+Ajax
+----
+
+Prefer promise based ``$.ajax`` calls over callback passing into settings object.
+
+.. code-block:: javascript
+
+    // bad
+    $.ajax('/url', {
+        dataType: 'json',
+        success: function () {
+        },
+        error: function () {
+        },
+        complete: function () {
+        }
+    });
+
+    // good
+    $.ajax({
+        urls: '/url',
+        dataType: 'json',
+    }).done(function myAjaxDone () {
+        ...
+    }).fail(function myAjaxFailed () {
+        ...
+    }).always(function myAjaxIsCompleted () {
+        ...
+    });
+
 
 Common patterns
 ===============
@@ -933,41 +1001,6 @@ Instead do this:
     });
 
 You will have explicit scope without any unexpected behaviours.
-
-
-jQuery
-------
-
-Do not prefix jQuery variables with ``$``.
-Always cache jQuery lookups.
-
-.. code-block:: javascript
-
-    // bad
-    function setSidebar() {
-        $('.sidebar').hide();
-        $('.sidebar').css({
-            'background-color': 'pink'
-        });
-    }
-
-    // bad
-    function setSidebar() {
-        var $sidebar = $('.sidebar');
-        $sidebar.hide();
-        $sidebar.css({
-            'background-color': 'pink'
-        });
-    }
-
-    // good
-    function setSidebar() {
-        var sidebar = $('.sidebar');
-        sidebar.hide();
-        sidebar.css({
-            'background-color': 'pink'
-        });
-    }
 
 
 Classes
