@@ -3,6 +3,19 @@ Aldryn Boilerplate Bootstrap 3
 ##############################
 
 
+3.4.0
+=====
+- major update to testing infrastructure
+- added integration tests
+- update dependencies
+- changed all {% load static %} instances to {% load staticfiles %}
+- update documentation
+- move tooling in package.json from dependencies to devDependencies
+- removed cl.debug.js
+- added coveralls support
+- updated jshint task to fail on travis correctly
+
+
 3.3.4
 =====
 - update to bootstrap 3.3.5
