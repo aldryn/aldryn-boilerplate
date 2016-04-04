@@ -42,6 +42,7 @@ var PROJECT_PATTERNS = {
         // exclude from linting
         '!' + PROJECT_PATH.js + '/*.min.js',
         '!' + PROJECT_PATH.js + '/**/*.min.js',
+        '!' + PROJECT_PATH.js + '/dist/*.js',
         '!' + PROJECT_PATH.tests + '/coverage/**/*'
     ],
     sass: [
@@ -73,7 +74,9 @@ gulp.task('bower', task('bower'));
 gulp.task('lint:javascript', task('lint/javascript'));
 gulp.task('lint', ['lint:javascript']);
 gulp.task('sass', task('sass'));
-gulp.task('build', ['sass']);
+gulp.task('webpack:once', task('webpack/once'));
+gulp.task('webpack:watch', task('webpack/watch'));
+gulp.task('build', ['sass', 'webpack:once']);
 
 /**
  * GULP_MODE === 'production' means we have a limited
@@ -98,7 +101,7 @@ if (process.env.GULP_MODE !== 'production') {
     gulp.task('tests:integration', ['tests:webdriver'], task('tests/integration'));
 }
 
-gulp.task('watch', function () {
+gulp.task('watch', ['webpack:watch'], function () {
     gulp.watch(PROJECT_PATTERNS.sass, ['sass']);
     gulp.watch(PROJECT_PATTERNS.js, ['lint']);
 });
