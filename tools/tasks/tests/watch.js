@@ -1,5 +1,3 @@
-'use strict';
-
 var karma = require('karma').server;
 
 module.exports = function (gulp, opts) {

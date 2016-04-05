@@ -1,5 +1,3 @@
-'use strict';
-
 var webpack = require('webpack');
 var base = require('./webpack.config.base');
 var _ = require('lodash');

@@ -1,5 +1,3 @@
-'use strict';
-
 var gutil = require('gulp-util');
 var webpack = require('webpack');
 

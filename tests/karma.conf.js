@@ -6,8 +6,6 @@
 
 /* eslint no-shadow: 0 */
 
-'use strict';
-
 // #############################################################################
 // CONFIGURATION
 var baseConf = require('./base.conf');

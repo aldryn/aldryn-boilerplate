@@ -4,7 +4,6 @@
  * http://github.com/aldryn/aldryn-boilerplate-bootstrap3
  */
 
-'use strict';
 /* global Cl, jasmine, describe, it, expect, Storage, spyOn, beforeEach */
 
 // #############################################################################
