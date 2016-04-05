@@ -28,6 +28,7 @@ npm-debug.log
 /static/css/
 /static/vendor
 /static/docs/
+/static/js/dist/
 
 /tests/coverage
 
