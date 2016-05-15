@@ -1,6 +1,7 @@
+process.env.NODE_ENV = 'production';
+
 var webpack = require('webpack');
 var base = require('./webpack.config.base');
-var _ = require('lodash');
 
 var config = _.merge(base, {
     devtool: false,
@@ -18,10 +19,5 @@ var config = _.merge(base, {
         })
     ]
 });
-
-// use babel-lodash-plugin https://github.com/lodash/babel-plugin-lodash
-_.find(config.module.loaders, function (item) {
-    return item.loader === 'babel';
-}).query.plugins.push('lodash');
 
 module.exports = config;

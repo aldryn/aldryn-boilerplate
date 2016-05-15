@@ -29,12 +29,8 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel',
-                exclude: /(node_modules|vendor|libs)/,
-                include: __dirname,
-                query: {
-                    presets: ['es2015'],
-                    plugins: ['transform-runtime']
-                }
+                exclude: /(node_modules|vendor|libs|tests\/unit\/helpers)/,
+                include: __dirname
             },
             {
                 test: /outdatedBrowser/,
