@@ -16,7 +16,7 @@ var config = {
     // Capabilities to be passed to the webdriver instance.
     capabilities: {
         'browserName': 'phantomjs',
-        'phantomjs.binary.path': require('phantomjs').path
+        'phantomjs.binary.path': require('phantomjs-prebuilt').path
     },
 
     onPrepare: function () {
