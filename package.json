@@ -25,12 +25,8 @@
     "imports-loader": "^0.6.5"
   },
   "devDependencies": {
-    "babel-istanbul": "^0.7.0",
-    "babel-istanbul-loader": "^0.1.0",
     "babel-plugin-__coverage__": "^0.111111.11",
     "babel-plugin-rewire": "^1.0.0-rc-2",
-    "babel-template": "^6.7.0",
-    "babel-types": "^6.7.2",
     "browser-sync": "^2.8.2",
     "browserslist-saucelabs": "^0.1.4",
     "gulp-cached": "^1.1.0",

@@ -2,6 +2,7 @@ process.env.NODE_ENV = 'production';
 
 var webpack = require('webpack');
 var base = require('./webpack.config.base');
+var _ = require('lodash');
 
 var config = _.merge(base, {
     devtool: false,
