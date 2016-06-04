@@ -41,10 +41,6 @@ module.exports = function (config) {
         // list of files / patterns to load in the browser
         // tests/${path}
         files: [
-            // tests helpers
-            'tests/unit/helpers/mock-ajax.js',
-            'tests/unit/helpers/jasmine-jquery.js',
-
             // tests themselves
             'tests/unit/*.js',
 

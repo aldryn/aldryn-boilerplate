@@ -1,3 +1,8 @@
+// test helpers have to be required in every test file,
+// so the same jquery is used in the code and in jasmine helpers
+import './helpers/mock-ajax';
+import './helpers/jasmine-jquery';
+
 import {
     noscript,
     setStorage,
