@@ -4,7 +4,6 @@
  * http://github.com/aldryn/aldryn-boilerplate-bootstrap3
  */
 
-'use strict';
 /* global describe, it, expect, browser */
 
 // #############################################################################
@@ -15,6 +14,6 @@ describe('Django CMS website', function () {
     it('should have a title', function () {
         browser.get(dummyPage.site);
 
-        expect(browser.getTitle()).toMatch(/django.cms/i);
+        expect(browser.getTitle()).toMatch(/django.cms/ig);
     });
 });
